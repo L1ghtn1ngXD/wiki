@@ -11,64 +11,81 @@
 
 <body>
 
-<header class="mw-header">
+<header class="header">
 
-    <div class="mw-header-left">
+    <a href="#Main_Page" class="logo">
 
-        <button id="menuButton" class="menu-button">
-            ☰
-        </button>
+        <img
+            src="assets/logo/logo.png"
+            alt="My Wiki"
+        >
 
-        <a href="#Main_Page" class="mw-logo">
-
-            <img
-                src="assets/logo/logo.png"
-                alt="My Wiki"
-            >
-
-            <div class="mw-logo-text">
-                <span class="mw-logo-title">My Wiki</span>
-                <span class="mw-logo-subtitle">
-                    The Free Encyclopedia
-                </span>
+        <div>
+            <div class="logo-title">
+                My Wiki
             </div>
 
-        </a>
+            <div class="logo-subtitle">
+                The Free Encyclopedia
+            </div>
+        </div>
 
-    </div>
-
-
-    <div class="mw-header-center">
-
-        <form id="searchForm" class="mw-search">
-
-            <span class="search-icon">⌕</span>
-
-            <input
-                id="searchInput"
-                type="search"
-                placeholder="Search My Wiki"
-                autocomplete="off"
-            >
-
-            <button type="submit">
-                Search
-            </button>
-
-        </form>
-
-    </div>
+    </a>
 
 
-    <div class="mw-header-right">
+    <form id="searchForm" class="search">
+
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Search My Wiki"
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+</header>
+
+
+<div class="layout">
+
+
+    <aside class="sidebar">
+
+        <h3>Navigation</h3>
 
         <a href="#Main_Page">
             Main page
         </a>
 
-        <a href="#random">
-            Random
+        <a href="#all">
+            All pages
         </a>
+
+        <a href="#random">
+            Random article
+        </a>
+
+
+        <h3>Wiki</h3>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#help">
+            Help
+        </a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+
+        <h3>Other</h3>
 
         <a
             href="https://github.com/L1ghtn1ngXD/wiki"
@@ -77,261 +94,112 @@
             GitHub
         </a>
 
-    </div>
-
-</header>
-
-
-<div class="mw-layout">
-
-
-    <aside id="sidebar" class="mw-sidebar">
-
-        <div class="sidebar-logo">
-
-            <img
-                src="assets/logo/logo.png"
-                alt="My Wiki"
-            >
-
-        </div>
-
-
-        <nav>
-
-            <div class="sidebar-section">
-
-                <h3>Navigation</h3>
-
-                <a href="#Main_Page">
-                    Main page
-                </a>
-
-                <a href="#random">
-                    Random article
-                </a>
-
-                <a href="#all">
-                    All pages
-                </a>
-
-            </div>
-
-
-            <div class="sidebar-section">
-
-                <h3>Participation</h3>
-
-                <a href="#help">
-                    Help
-                </a>
-
-                <a
-                    href="https://github.com/L1ghtn1ngXD/wiki"
-                    target="_blank"
-                >
-                    Community portal
-                </a>
-
-            </div>
-
-
-            <div class="sidebar-section">
-
-                <h3>Tools</h3>
-
-                <a href="#special">
-                    Special pages
-                </a>
-
-                <a href="#categories">
-                    Categories
-                </a>
-
-            </div>
-
-        </nav>
-
     </aside>
 
 
-    <main class="mw-main">
+    <main class="content">
 
 
-        <div class="mw-page-header">
+        <div class="tabs">
 
+            <a
+                href="#Main_Page"
+                class="active"
+            >
+                Main Page
+            </a>
 
-            <div class="mw-page-title-area">
-
-                <div class="mw-namespace-tabs">
-
-                    <a
-                        href="#Main_Page"
-                        class="active"
-                    >
-                        Page
-                    </a>
-
-                    <a href="#discussion">
-                        Discussion
-                    </a>
-
-                </div>
-
-
-                <div class="mw-title-row">
-
-                    <h1 id="pageTitle">
-                        Main Page
-                    </h1>
-
-                </div>
-
-            </div>
-
-
-            <div class="mw-page-actions">
-
-                <div class="mw-action-tabs">
-
-                    <a
-                        href="#Main_Page"
-                        class="active"
-                    >
-                        Read
-                    </a>
-
-                    <a id="editLink" target="_blank">
-                        Edit
-                    </a>
-
-                    <a id="sourceLink" target="_blank">
-                        View source
-                    </a>
-
-                    <a href="#history">
-                        View history
-                    </a>
-
-                </div>
-
-            </div>
+            <a
+                id="editLink"
+                target="_blank"
+            >
+                Edit
+            </a>
 
         </div>
 
 
-        <div class="mw-page-line"></div>
+        <article id="article">
+
+            <h1>
+                Main Page
+            </h1>
+
+            <hr>
 
 
-        <div class="mw-content">
-
-
-            <article id="article">
-
-
-                <div class="mw-welcome">
-
-                    <h2>
-                        Welcome to My Wiki
-                    </h2>
-
-                    <p>
-                        The free encyclopedia that anyone can edit.
-                    </p>
-
-                </div>
-
+            <div class="welcome">
 
                 <h2>
-                    About My Wiki
+                    Welcome to My Wiki
                 </h2>
 
                 <p>
-                    My Wiki is a free encyclopedia containing
-                    articles, documentation, guides and information.
+                    The free encyclopedia that anyone can edit.
                 </p>
 
-
-                <h2>
-                    Featured content
-                </h2>
-
-                <p>
-                    There is currently no featured content.
-                </p>
-
-
-                <h2>
-                    Did you know?
-                </h2>
-
-                <ul>
-
-                    <li>
-                        This wiki is hosted using GitHub Pages.
-                    </li>
-
-                    <li>
-                        Anyone can contribute through GitHub.
-                    </li>
-
-                </ul>
-
-
-            </article>
-
-
-            <aside class="mw-toc">
-
-                <div class="toc-title">
-                    Contents
-                    <button id="tocToggle">
-                        hide
-                    </button>
-                </div>
-
-                <nav id="toc">
-
-                </nav>
-
-            </aside>
-
-
-        </div>
-
-
-        <footer class="mw-footer">
-
-            <div>
-                This page was last edited on 20 August 2026.
             </div>
 
-            <div>
-                Content is available under a free license.
-            </div>
 
-            <div class="footer-links">
+            <h2>
+                About
+            </h2>
 
-                <a href="#privacy">
-                    Privacy policy
-                </a>
+            <p>
+                My Wiki is a simple community encyclopedia
+                for information, guides, projects and other
+                interesting things.
+            </p>
 
-                <a href="#about">
-                    About My Wiki
-                </a>
 
-                <a href="#disclaimer">
-                    Disclaimers
-                </a>
+            <h2>
+                Explore
+            </h2>
 
-            </div>
+            <ul>
 
-        </footer>
+                <li>
+                    <a href="#all">
+                        Browse all pages
+                    </a>
+                </li>
 
+                <li>
+                    <a href="#random">
+                        Random article
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#categories">
+                        Browse categories
+                    </a>
+                </li>
+
+            </ul>
+
+        </article>
 
     </main>
 
 </div>
+
+
+<footer>
+
+    <span>
+        My Wiki
+    </span>
+
+    <span>
+        •
+    </span>
+
+    <a href="#about">
+        About
+    </a>
+
+</footer>
 
 
 <script src="app.js"></script>
