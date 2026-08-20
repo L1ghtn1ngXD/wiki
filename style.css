@@ -2,23 +2,17 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
 
-    background: #ffffff;
-
     color: #202122;
+
+    background: #ffffff;
 
     font-family:
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
-        Roboto,
-        Helvetica,
         Arial,
         sans-serif;
 
@@ -27,272 +21,128 @@ body {
     line-height: 1.6;
 }
 
-
-/* ==============================
-   HEADER
-   ============================== */
-
-.mw-header {
-
-    height: 80px;
+.header {
+    height: 70px;
 
     display: flex;
 
     align-items: center;
 
-    padding: 10px 24px;
+    gap: 35px;
 
-    gap: 22px;
+    padding: 8px 25px;
 
-    border-bottom: 1px solid #eaecf0;
-
-    background: #ffffff;
+    border-bottom: 1px solid #c8ccd1;
 }
 
 
-.mw-header-left {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    min-width: 260px;
-}
-
-
-.menu-button {
-
-    display: none;
-
-    border: 0;
-
-    background: transparent;
-
-    font-size: 22px;
-
-    cursor: pointer;
-}
-
-
-.mw-logo {
-
+.logo {
     display: flex;
 
     align-items: center;
 
     gap: 10px;
 
-    text-decoration: none;
+    min-width: 230px;
 
     color: #202122;
+
+    text-decoration: none;
 }
 
 
-.mw-logo img {
-
-    width: 50px;
-
-    height: 50px;
+.logo img {
+    width: 48px;
+    height: 48px;
 
     object-fit: contain;
 }
 
 
-.mw-logo-text {
-
-    display: flex;
-
-    flex-direction: column;
-
-    line-height: 1.1;
-}
-
-
-.mw-logo-title {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+.logo-title {
+    font-family: Georgia, serif;
 
     font-size: 21px;
 }
 
 
-.mw-logo-subtitle {
+.logo-subtitle {
+    color: #54595d;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, serif;
 
     font-size: 11px;
-
-    color: #54595d;
 }
 
-
-.mw-header-center {
-
-    flex: 1;
-
-    max-width: 650px;
-}
-
-
-.mw-search {
-
-    height: 36px;
-
+.search {
     display: flex;
 
-    align-items: center;
+    width: 500px;
 
-    border: 1px solid #a2a9b1;
+    max-width: 100%;
 
-    background: #ffffff;
+    height: 36px;
 }
 
 
-.search-icon {
-
-    padding-left: 9px;
-
-    color: #72777d;
-
-    font-size: 20px;
-}
-
-
-.mw-search input {
-
+.search input {
     flex: 1;
 
     min-width: 0;
 
-    height: 34px;
+    padding: 7px 10px;
 
-    border: 0;
+    border: 1px solid #a2a9b1;
 
-    outline: 0;
-
-    padding: 5px 9px;
+    outline: none;
 
     font-size: 14px;
 }
 
 
-.mw-search button {
+.search input:focus {
+    border-color: #36c;
+}
 
-    height: 34px;
 
+.search button {
     padding: 0 15px;
 
-    border: 0;
-
-    border-left: 1px solid #a2a9b1;
+    border: 1px solid #a2a9b1;
 
     background: #f8f9fa;
 
     cursor: pointer;
-
-    font-weight: 600;
 }
 
 
-.mw-search button:hover {
-
+.search button:hover {
     background: #eaecf0;
 }
 
-
-.mw-header-right {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    white-space: nowrap;
-}
-
-
-.mw-header-right a {
-
-    color: #36c;
-
-    text-decoration: none;
-}
-
-
-.mw-header-right a:hover {
-
-    text-decoration: underline;
-}
-
-
-/* ==============================
-   MAIN LAYOUT
-   ============================== */
-
-.mw-layout {
-
+.layout {
     display: grid;
 
     grid-template-columns:
-        230px
-        minmax(0, 1fr);
+        210px
+        minmax(0, 900px);
 
-    max-width: 1600px;
+    gap: 35px;
+
+    max-width: 1200px;
 
     margin: auto;
+
+    padding: 25px;
+}
+
+.sidebar {
+    font-size: 14px;
 }
 
 
-/* ==============================
-   SIDEBAR
-   ============================== */
-
-.mw-sidebar {
-
-    padding: 25px 20px;
-
-    border-right: 1px solid #eaecf0;
-
-    min-height: calc(100vh - 80px);
-}
-
-
-.sidebar-logo {
-
-    padding: 0 8px 22px;
-
-    text-align: center;
-}
-
-
-.sidebar-logo img {
-
-    width: 80px;
-
-    height: 80px;
-
-    object-fit: contain;
-}
-
-
-.sidebar-section {
-
-    margin-bottom: 28px;
-}
-
-
-.sidebar-section h3 {
-
-    margin: 0 0 7px;
+.sidebar h3 {
+    margin: 0 0 5px;
 
     padding-bottom: 4px;
 
@@ -301,16 +151,18 @@ body {
     color: #54595d;
 
     font-size: 13px;
-
-    font-weight: 600;
 }
 
 
-.sidebar-section a {
+.sidebar h3:not(:first-child) {
+    margin-top: 25px;
+}
 
+
+.sidebar a {
     display: block;
 
-    padding: 4px 7px;
+    padding: 4px 6px;
 
     color: #36c;
 
@@ -318,78 +170,57 @@ body {
 }
 
 
-.sidebar-section a:hover {
-
+.sidebar a:hover {
     background: #eaecf0;
 
     text-decoration: underline;
 }
 
-
-/* ==============================
-   MAIN
-   ============================== */
-
-.mw-main {
-
+.content {
     min-width: 0;
-
-    padding: 0 32px;
 }
 
 
-.mw-page-header {
-
-    min-height: 80px;
-
+.tabs {
     display: flex;
 
-    justify-content: space-between;
+    gap: 15px;
 
-    align-items: end;
+    margin-bottom: 15px;
 
-    gap: 20px;
+    border-bottom: 1px solid #c8ccd1;
 }
 
 
-.mw-namespace-tabs {
-
-    display: flex;
-
-    gap: 14px;
-
-    margin-bottom: 6px;
-}
-
-
-.mw-namespace-tabs a {
+.tabs a {
+    padding: 6px 4px;
 
     color: #36c;
 
     text-decoration: none;
 
-    padding: 6px 4px;
+    cursor: pointer;
 }
 
 
-.mw-namespace-tabs .active {
-
+.tabs .active {
     color: #202122;
 
-    font-weight: 600;
+    font-weight: bold;
 
     border-bottom: 2px solid #202122;
 }
 
 
-.mw-title-row h1 {
+article {
+    max-width: 850px;
+}
 
+
+article h1 {
     margin: 0;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, serif;
 
     font-size: 34px;
 
@@ -399,372 +230,144 @@ body {
 }
 
 
-.mw-action-tabs {
-
-    display: flex;
-
-    gap: 14px;
-
-    margin-bottom: 6px;
-}
-
-
-.mw-action-tabs a {
-
-    padding: 6px 4px;
-
-    color: #36c;
-
-    text-decoration: none;
-}
-
-
-.mw-action-tabs a:hover {
-
-    text-decoration: underline;
-}
-
-
-.mw-action-tabs .active {
-
-    color: #202122;
-
-    font-weight: 600;
-}
-
-
-.mw-page-line {
-
-    border-top: 1px solid #a2a9b1;
-
-    margin-bottom: 24px;
-}
-
-
-/* ==============================
-   CONTENT
-   ============================== */
-
-.mw-content {
-
-    max-width: 1100px;
-
-    position: relative;
-
-    padding-bottom: 50px;
-}
-
-
-#article {
-
-    max-width: 900px;
-
-    font-size: 15px;
-}
-
-
-#article h2 {
-
+article h2 {
     margin-top: 28px;
 
     padding-bottom: 4px;
 
     border-bottom: 1px solid #a2a9b1;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, serif;
 
-    font-size: 24px;
+    font-size: 23px;
 
     font-weight: normal;
 }
 
 
-#article h3 {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 19px;
-
-    font-weight: normal;
-}
-
-
-#article a {
-
+article a {
     color: #36c;
 
     text-decoration: none;
 }
 
 
-#article a:hover {
-
+article a:hover {
     text-decoration: underline;
 }
 
 
-#article hr {
+article hr {
+    margin: 8px 0 25px;
 
     border: 0;
 
     border-top: 1px solid #a2a9b1;
-
-    margin: 8px 0 22px;
 }
 
+.welcome {
+    padding: 18px;
 
-/* ==============================
-   WELCOME
-   ============================== */
-
-.mw-welcome {
-
-    border: 1px solid #a2a9b1;
+    border: 1px solid #c8ccd1;
 
     background: #f8f9fa;
-
-    padding: 18px 22px;
-
-    margin-bottom: 25px;
 
     text-align: center;
 }
 
 
-.mw-welcome h2 {
-
-    margin: 0 0 5px !important;
-
-    border: 0 !important;
-
-    font-size: 25px !important;
-}
-
-
-.mw-welcome p {
-
+.welcome h2 {
     margin: 0;
-}
-
-
-/* ==============================
-   TABLE OF CONTENTS
-   ============================== */
-
-.mw-toc {
-
-    display: inline-block;
-
-    margin: 20px 0;
-
-    padding: 8px 16px 12px;
-
-    border: 1px solid #a2a9b1;
-
-    background: #ffffff;
-
-    min-width: 230px;
-}
-
-
-.toc-title {
-
-    font-weight: bold;
-
-    margin-bottom: 4px;
-}
-
-
-.toc-title button {
 
     border: 0;
 
-    background: transparent;
-
-    color: #36c;
-
-    cursor: pointer;
-
-    margin-left: 12px;
+    font-size: 24px;
 }
 
 
-.mw-toc nav {
-
-    display: flex;
-
-    flex-direction: column;
+.welcome p {
+    margin-bottom: 0;
 }
 
+footer {
+    margin-top: 30px;
 
-.mw-toc a {
-
-    color: #36c;
-
-    text-decoration: none;
-
-    padding: 2px 0;
-}
-
-
-.mw-toc a:hover {
-
-    text-decoration: underline;
-}
-
-
-.mw-toc .toc-level-3 {
-
-    padding-left: 20px;
-}
-
-
-/* ==============================
-   FOOTER
-   ============================== */
-
-.mw-footer {
+    padding: 20px 25px;
 
     border-top: 1px solid #c8ccd1;
 
-    padding: 25px 0 40px;
+    background: #f8f9fa;
 
     color: #54595d;
+
+    text-align: center;
 
     font-size: 13px;
 }
 
 
-.footer-links {
-
-    display: flex;
-
-    gap: 18px;
-
-    margin-top: 10px;
+footer span,
+footer a {
+    margin: 0 5px;
 }
 
 
-.footer-links a {
-
+footer a {
     color: #36c;
 
     text-decoration: none;
 }
 
 
-.footer-links a:hover {
-
+footer a:hover {
     text-decoration: underline;
 }
 
+@media (max-width: 700px) {
 
-/* ==============================
-   MOBILE
-   ============================== */
-
-@media (max-width: 900px) {
-
-    .mw-header {
-
+    .header {
         height: auto;
-
-        flex-wrap: wrap;
-
-        padding: 10px 15px;
-    }
-
-
-    .mw-header-left {
-
-        min-width: 0;
-
-        flex: 1;
-    }
-
-
-    .mw-header-center {
-
-        order: 3;
-
-        flex-basis: 100%;
-
-        max-width: none;
-    }
-
-
-    .mw-header-right {
-
-        display: none;
-    }
-
-
-    .menu-button {
-
-        display: block;
-    }
-
-
-    .mw-layout {
-
-        display: block;
-    }
-
-
-    .mw-sidebar {
-
-        display: none;
-
-        min-height: 0;
-
-        border-right: 0;
-
-        border-bottom: 1px solid #eaecf0;
-    }
-
-
-    .mw-sidebar.open {
-
-        display: block;
-    }
-
-
-    .mw-main {
-
-        padding: 0 18px;
-    }
-
-
-    .mw-page-header {
-
-        align-items: start;
 
         flex-direction: column;
 
-        padding-top: 10px;
+        align-items: stretch;
+
+        gap: 10px;
     }
 
 
-    .mw-page-actions {
+    .logo {
+        min-width: 0;
+    }
 
+
+    .search {
         width: 100%;
     }
 
 
-    .mw-action-tabs {
+    .layout {
+        display: block;
 
-        margin-bottom: 0;
+        padding: 15px;
     }
 
 
-    .mw-title-row h1 {
+    .sidebar {
+        margin-bottom: 25px;
 
+        padding-bottom: 15px;
+
+        border-bottom: 1px solid #c8ccd1;
+    }
+
+
+    .sidebar h3:not(:first-child) {
+        margin-top: 15px;
+    }
+
+
+    article h1 {
         font-size: 30px;
     }
 
