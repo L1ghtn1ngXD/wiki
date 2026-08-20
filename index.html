@@ -3,232 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Wiki</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="top-header">
+<header class="mw-header">
 
-    <button class="menu-button" id="menuButton" aria-label="Open menu">
-        ☰
-    </button>
+    <div class="mw-header-left">
 
-    <a href="#Main_Page" class="wiki-logo">
-        <img
-            src="assets/logo/logo.png"
-            alt="My Wiki"
-            class="logo-image"
-        >
-
-        <div class="logo-text">
-            <strong>My Wiki</strong>
-            <span>The Free Encyclopedia</span>
-        </div>
-    </a>
-
-    <form class="search-box" id="searchForm">
-        <input
-            type="search"
-            id="searchInput"
-            placeholder="Search My Wiki"
-            autocomplete="off"
-        >
-
-        <button type="submit">
-            Search
+        <button id="menuButton" class="menu-button">
+            ☰
         </button>
-    </form>
 
-    <button
-        class="theme-button"
-        id="themeButton"
-        title="Change theme"
-    >
-        ◐
-    </button>
+        <a href="#Main_Page" class="mw-logo">
+
+            <img
+                src="assets/logo/logo.png"
+                alt="My Wiki"
+            >
+
+            <div class="mw-logo-text">
+                <span class="mw-logo-title">My Wiki</span>
+                <span class="mw-logo-subtitle">
+                    The Free Encyclopedia
+                </span>
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <div class="mw-header-center">
+
+        <form id="searchForm" class="mw-search">
+
+            <span class="search-icon">⌕</span>
+
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Search My Wiki"
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="mw-header-right">
+
+        <a href="#Main_Page">
+            Main page
+        </a>
+
+        <a href="#random">
+            Random
+        </a>
+
+        <a
+            href="https://github.com/L1ghtn1ngXD/wiki"
+            target="_blank"
+        >
+            GitHub
+        </a>
+
+    </div>
 
 </header>
 
 
-<div class="page-layout">
-
-    <aside class="sidebar" id="sidebar">
-
-        <section>
-            <h3>Navigation</h3>
-
-            <a href="#Main_Page">
-                Main page
-            </a>
-
-            <a href="#random">
-                Random article
-            </a>
-
-            <a href="#all">
-                All pages
-            </a>
-        </section>
+<div class="mw-layout">
 
 
-        <section>
-            <h3>Contribute</h3>
+    <aside id="sidebar" class="mw-sidebar">
 
-            <a
-                href="https://github.com/L1ghtn1ngXD/wiki"
-                target="_blank"
-                rel="noopener"
+        <div class="sidebar-logo">
+
+            <img
+                src="assets/logo/logo.png"
+                alt="My Wiki"
             >
-                GitHub ↗
-            </a>
 
-            <a
-                id="editLink"
-                target="_blank"
-                rel="noopener"
-            >
-                Edit this page ↗
-            </a>
-        </section>
+        </div>
 
 
-        <section>
-            <h3>Tools</h3>
+        <nav>
 
-            <a href="#categories">
-                Categories
-            </a>
+            <div class="sidebar-section">
 
-            <a href="#recent">
-                Recent changes
-            </a>
-        </section>
+                <h3>Navigation</h3>
+
+                <a href="#Main_Page">
+                    Main page
+                </a>
+
+                <a href="#random">
+                    Random article
+                </a>
+
+                <a href="#all">
+                    All pages
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <h3>Participation</h3>
+
+                <a href="#help">
+                    Help
+                </a>
+
+                <a
+                    href="https://github.com/L1ghtn1ngXD/wiki"
+                    target="_blank"
+                >
+                    Community portal
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <h3>Tools</h3>
+
+                <a href="#special">
+                    Special pages
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+            </div>
+
+        </nav>
 
     </aside>
 
 
-    <main class="main-content">
+    <main class="mw-main">
 
-        <div class="page-tabs">
 
-            <div class="tabs-left">
+        <div class="mw-page-header">
 
-                <a
-                    href="#Main_Page"
-                    class="active"
-                >
-                    Read
-                </a>
 
-                <a
-                    id="sourceLink"
-                    target="_blank"
-                >
-                    Source
-                </a>
+            <div class="mw-page-title-area">
+
+                <div class="mw-namespace-tabs">
+
+                    <a
+                        href="#Main_Page"
+                        class="active"
+                    >
+                        Page
+                    </a>
+
+                    <a href="#discussion">
+                        Discussion
+                    </a>
+
+                </div>
+
+
+                <div class="mw-title-row">
+
+                    <h1 id="pageTitle">
+                        Main Page
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="mw-page-actions">
+
+                <div class="mw-action-tabs">
+
+                    <a
+                        href="#Main_Page"
+                        class="active"
+                    >
+                        Read
+                    </a>
+
+                    <a id="editLink" target="_blank">
+                        Edit
+                    </a>
+
+                    <a id="sourceLink" target="_blank">
+                        View source
+                    </a>
+
+                    <a href="#history">
+                        View history
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <article id="article">
+        <div class="mw-page-line"></div>
 
-            <h1>Main Page</h1>
 
-            <hr>
+        <div class="mw-content">
 
-            <section class="welcome-box">
+
+            <article id="article">
+
+
+                <div class="mw-welcome">
+
+                    <h2>
+                        Welcome to My Wiki
+                    </h2>
+
+                    <p>
+                        The free encyclopedia that anyone can edit.
+                    </p>
+
+                </div>
+
 
                 <h2>
-                    Welcome to My Wiki
+                    About My Wiki
                 </h2>
 
                 <p>
-                    Welcome to the free encyclopedia
-                    that anyone can edit.
+                    My Wiki is a free encyclopedia containing
+                    articles, documentation, guides and information.
                 </p>
 
-            </section>
+
+                <h2>
+                    Featured content
+                </h2>
+
+                <p>
+                    There is currently no featured content.
+                </p>
 
 
-            <h2>
-                About this wiki
-            </h2>
+                <h2>
+                    Did you know?
+                </h2>
 
-            <p>
-                My Wiki is a community-driven encyclopedia
-                containing articles, information, guides,
-                technical documentation and other useful content.
-            </p>
+                <ul>
 
+                    <li>
+                        This wiki is hosted using GitHub Pages.
+                    </li>
 
-            <h2>
-                Navigation
-            </h2>
+                    <li>
+                        Anyone can contribute through GitHub.
+                    </li>
 
-            <ul>
-
-                <li>
-                    <a href="#all">
-                        Browse all pages
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#random">
-                        Read a random article
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#categories">
-                        Browse categories
-                    </a>
-                </li>
-
-            </ul>
+                </ul>
 
 
-            <h2>
-                Featured article
-            </h2>
+            </article>
 
-            <p>
-                There are currently no featured articles.
-            </p>
 
-        </article>
+            <aside class="mw-toc">
+
+                <div class="toc-title">
+                    Contents
+                    <button id="tocToggle">
+                        hide
+                    </button>
+                </div>
+
+                <nav id="toc">
+
+                </nav>
+
+            </aside>
+
+
+        </div>
+
+
+        <footer class="mw-footer">
+
+            <div>
+                This page was last edited on 20 August 2026.
+            </div>
+
+            <div>
+                Content is available under a free license.
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#privacy">
+                    Privacy policy
+                </a>
+
+                <a href="#about">
+                    About My Wiki
+                </a>
+
+                <a href="#disclaimer">
+                    Disclaimers
+                </a>
+
+            </div>
+
+        </footer>
+
 
     </main>
 
-
-    <aside class="toc">
-
-        <h3>
-            Contents
-        </h3>
-
-        <nav id="toc"></nav>
-
-    </aside>
-
 </div>
-
-
-<footer>
-
-    <p>
-        Content is available under a free license.
-    </p>
-
-    <p>
-        This site is powered by GitHub Pages.
-    </p>
-
-</footer>
 
 
 <script src="app.js"></script>
